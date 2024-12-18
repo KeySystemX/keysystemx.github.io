@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Executors Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             background-color: #f8f9fa;
@@ -19,20 +19,36 @@
             padding: 10px 0;
             text-align: center;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+        .section {
+            margin: 20px 0;
         }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
+        .section h2 {
+            color: #343a40;
+            border-bottom: 2px solid #343a40;
+            padding-bottom: 10px;
         }
-        nav ul li a {
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .button {
+            background-color: #5865F2;
             color: white;
-            text-decoration: none;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
         }
-        .content {
-            padding: 20px;
+        .button:hover {
+            background-color: #4a55bf;
+        }
+        .button i {
+            margin-right: 10px;
         }
         footer {
             background-color: #343a40;
@@ -47,29 +63,39 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Executors Dashboard</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#pc-executors">PC Executors</a></li>
+                <li><a href="#mobile-executors">Mobile Executors</a></li>
             </ul>
         </nav>
     </header>
-    <div class="content" id="home">
-        <h2>Home</h2>
-        <p>This is the home page of my simple website. You can add more content here.</p>
+
+    <div class="content">
+        <div class="section" id="pc-executors">
+            <h2>PC Executors</h2>
+            <div class="button-container">
+                <button class="button"><i class="fas fa-desktop"></i> PC Executor 1</button>
+                <button class="button"><i class="fas fa-desktop"></i> PC Executor 2</button>
+                <button class="button"><i class="fas fa-desktop"></i> PC Executor 3</button>
+                <button class="button"><i class="fas fa-desktop"></i> PC Executor 4</button>
+            </div>
+        </div>
+
+        <div class="section" id="mobile-executors">
+            <h2>Mobile Executors</h2>
+            <div class="button-container">
+                <button class="button"><i class="fas fa-mobile-alt"></i> Mobile Executor 1</button>
+                <button class="button"><i class="fas fa-mobile-alt"></i> Mobile Executor 2</button>
+                <button class="button"><i class="fas fa-mobile-alt"></i> Mobile Executor 3</button>
+                <button class="button"><i class="fas fa-mobile-alt"></i> Mobile Executor 4</button>
+            </div>
+        </div>
     </div>
-    <div class="content" id="about">
-        <h2>About</h2>
-        <p>This section contains information about the website or the website owner.</p>
-    </div>
-    <div class="content" id="contact">
-        <h2>Contact</h2>
-        <p>This section contains contact information or a contact form.</p>
-    </div>
+
     <footer>
-        <p>&copy; 2024 My Simple Website</p>
+        <p>&copy; 2024 Executors Dashboard</p>
     </footer>
 </body>
 </html>
