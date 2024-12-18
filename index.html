@@ -3,234 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Dashboard</title>
+    <title>My Simple Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            background-color: #0D0D0D;
-            color: white;
+            background-color: #f8f9fa;
+            color: #343a40;
             font-family: Arial, sans-serif;
             padding: 20px;
+            margin: 0;
         }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .create-link-btn {
-            background-color: #5865F2;
+        header {
+            background-color: #343a40;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: all 0.3s ease;
+            padding: 10px 0;
+            text-align: center;
         }
-        .create-link-btn:hover {
-            background-color: #4a55bf;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
         }
         .content {
-            display: flex;
-            justify-content: space-between;
-        }
-        .form-container, .preview-container {
-            background-color: #1A1A1A;
-            color: white;
             padding: 20px;
-            border-radius: 10px;
-            width: 45%;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
         }
-        .input-field, select {
-            width: calc(100% - 30px);
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 2px solid #B3B3B3;
-            border-radius: 5px;
-            font-size: 16px;
-            background-color: white;
-            color: black;
-        }
-        .button {
-            background-color: #5865F2;
+        footer {
+            background-color: #343a40;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-            display: inline-block;
-        }
-        .button:hover {
-            background-color: #4a55bf;
-        }
-        .green-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-        .green-button:hover {
-            background-color: #45A049;
-        }
-        .error {
-            color: red;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .success-message {
-            color: #4CAF50;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .icon-preview {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            background-color: #fff;
-            overflow: hidden;
-        }
-        .icon-preview img {
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .live-preview {
-            background-color: #252525;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 100%;
-            margin-top: 20px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Link Dashboard</h1>
-        <button class="create-link-btn" id="createLinkBtn">Create Link</button>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content" id="home">
+        <h2>Home</h2>
+        <p>This is the home page of my simple website. You can add more content here.</p>
     </div>
-    <div class="content">
-        <div class="form-container">
-            <div class="create-link-interface" id="createLinkInterface">
-                <label for="linkTitle">Link Title:</label>
-                <input type="text" id="linkTitle" class="input-field" placeholder="Enter Link Title">
-
-                <label for="iconInput">Choose Icon:</label>
-                <div class="icon-preview" id="iconPreview">No icon chosen</div>
-                <input type="file" id="iconInput" class="input-field">
-
-                <label for="buttonText">Button Text:</label>
-                <input type="text" id="buttonText" class="input-field" placeholder="Enter Button Text">
-
-                <label for="redirectURL">Redirect URL:</label>
-                <input type="text" id="redirectURL" class="input-field" placeholder="Enter Redirect URL">
-
-                <label for="linkKey">Key:</label>
-                <input type="text" id="linkKey" class="input-field" placeholder="Enter Key">
-                <button class="green-button" id="getKeyButton">Get Key</button>
-
-                <button class="button" id="createLinkButton">Create Link</button>
-
-                <div class="success-message" id="successMessage"></div>
-                <div class="error" id="errorMessage"></div>
-            </div>
-        </div>
-        <div class="preview-container">
-            <h2>Live Preview</h2>
-            <div class="live-preview" id="livePreview">
-                <!-- Live Preview will be shown here -->
-            </div>
-        </div>
+    <div class="content" id="about">
+        <h2>About</h2>
+        <p>This section contains information about the website or the website owner.</p>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const createLinkBtn = document.getElementById('createLinkBtn');
-            const createLinkInterface = document.getElementById('createLinkInterface');
-            const linkTitle = document.getElementById('linkTitle');
-            const iconInput = document.getElementById('iconInput');
-            const buttonText = document.getElementById('buttonText');
-            const redirectURL = document.getElementById('redirectURL');
-            const linkKey = document.getElementById('linkKey');
-            const livePreview = document.getElementById('livePreview');
-            const successMessage = document.getElementById('successMessage');
-            const errorMessage = document.getElementById('errorMessage');
-            const iconPreview = document.getElementById('iconPreview');
-            const createLinkButton = document.getElementById('createLinkButton');
-            const getKeyButton = document.getElementById('getKeyButton');
-
-            createLinkBtn.addEventListener('click', function() {
-                createLinkInterface.style.display = 'block';
-            });
-
-            iconInput.addEventListener('change', function() {
-                const file = this.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        iconPreview.innerHTML = `<img src="${e.target.result}" alt="Icon">`;
-                        updatePreview();
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
-
-            [linkTitle, buttonText, redirectURL].forEach(input => {
-                input.addEventListener('input', updatePreview);
-            });
-
-            function updatePreview() {
-                livePreview.innerHTML = `
-                    <h2>${linkTitle.value.trim() || "Preview Title"}</h2>
-                    <div class="icon-preview">
-                        ${iconPreview.innerHTML || "No icon chosen"}
-                    </div>
-                    <button class="button">${buttonText.value.trim() || "Button Text"}</button>
-                    <p>${redirectURL.value.trim() || "Redirect URL"}</p>
-                `;
-            }
-
-            function generateUniqueId() {
-                return Math.floor(Math.random() * 100000);
-            }
-
-            function createLink() {
-                if (linkTitle.value.trim() === "" || buttonText.value.trim() === "" || redirectURL.value.trim() === "" || linkKey.value.trim() === "") {
-                    errorMessage.textContent = 'All fields are required.';
-                    return;
-                }
-
-                // Save the link data
-                const linkData = {
-                    id: generateUniqueId(),
-                    title: linkTitle.value.trim(),
-                    icon: iconPreview.querySelector('img') ? iconPreview.querySelector('img').src : '',
-                    buttonText: buttonText.value.trim(),
-                    redirectURL: redirectURL.value.trim(),
-                    key: linkKey.value.trim()
-                };
-
-                localStorage.setItem('linkData', JSON.stringify(linkData));
-                successMessage.textContent = 'Link created successfully! Your link: ' +
-                    `keysystemx.github.io/${linkData.id}/${encodeURIComponent(linkData.title.replace(/\s+/g, '-'))}`;
-                errorMessage.textContent = '';
-            }
-
-            createLinkButton.addEventListener('click', createLink);
-        });
-    </script>
+    <div class="content" id="contact">
+        <h2>Contact</h2>
+        <p>This section contains contact information or a contact form.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Simple Website</p>
+    </footer>
 </body>
 </html>
