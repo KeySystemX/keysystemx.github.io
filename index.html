@@ -87,11 +87,74 @@
             transition: all 0.3s ease;
         }
 
-        .button:hover {
+        .button.disabled {
+            background-color: #A3A3A3;
+            cursor: not-allowed;
+        }
+
+        .button:hover:not(.disabled) {
             background-color: #F0F0F0;
             border-color: #A3A3A3;
         }
+
+        .completed {
+            color: green;
+            font-weight: bold;
+        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const checkpoint1 = urlParams.get('checkpoint-1');
+            const checkpoint2 = urlParams.get('checkpoint-2');
+            const checkpoint3 = urlParams.get('checkpoint-3');
+
+            // Get elements
+            const page1Button = document.getElementById('page1');
+            const page2Button = document.getElementById('page2');
+            const unlockContentButton = document.getElementById('unlockContent');
+
+            // Checkpoints state
+            let checkpoint1Done = checkpoint1 === 'done';
+            let checkpoint2Done = checkpoint2 === 'done';
+            let checkpoint3Done = checkpoint3 === 'done';
+
+            // Update buttons
+            if (checkpoint1Done) {
+                page1Button.classList.add('completed');
+                page2Button.classList.remove('disabled');
+            }
+
+            if (checkpoint2Done) {
+                page2Button.classList.add('completed');
+                unlockContentButton.classList.remove('disabled');
+            }
+
+            if (checkpoint3Done) {
+                unlockContentButton.classList.add('completed');
+            }
+
+            // Handle button clicks
+            page1Button.addEventListener('click', function() {
+                if (!checkpoint1Done) {
+                    window.location.href = 'https://linkvertise.com/your-link?redirect=https://keysystemx.github.io?checkpoint-1=done';
+                }
+            });
+
+            page2Button.addEventListener('click', function() {
+                if (checkpoint1Done && !checkpoint2Done) {
+                    window.location.href = 'https://linkvertise.com/your-link?redirect=https://keysystemx.github.io?checkpoint-2=done';
+                }
+            });
+
+            unlockContentButton.addEventListener('click', function() {
+                if (checkpoint2Done && !checkpoint3Done) {
+                    window.location.href = 'https://linkvertise.com/your-link?redirect=https://keysystemx.github.io?checkpoint-3=done';
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Icon above the box -->
@@ -105,9 +168,9 @@
         <p>Click the buttons below to proceed.</p>
 
         <!-- Buttons -->
-        <button class="button" onclick="window.location.href='page1/index.html'">Go to Page 1</button>
-        <button class="button" onclick="window.location.href='page2/index.html'">Go to Page 2</button>
-        <button class="button" onclick="window.location.href='page3/index.html'">Go to Page 3</button>
+        <button class="button" id="page1">Go to Page 1</button>
+        <button class="button disabled" id="page2">Go to Page 2</button>
+        <button class="button disabled" id="unlockContent">Unlock Content</button>
 
         <!-- Social media icons BELOW the buttons -->
         <div class="social-icons">
