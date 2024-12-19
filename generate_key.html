@@ -27,12 +27,19 @@
             background-color: #4a55bf;
         }
         .textbox {
-            width: 60%;
-            padding: 15px;
+            width: 30%; /* Adjusted width of the input box */
+            padding: 10px;
             border: 2px solid #B3B3B3;
             border-radius: 5px;
             font-size: 18px;
             margin-bottom: 10px;
+            text-align: center;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Adds space between the buttons */
+            margin-top: 10px;
         }
         .green-button {
             background-color: #4CAF50;
@@ -44,7 +51,6 @@
             font-size: 16px;
             transition: all 0.3s ease;
             display: none;
-            margin-top: 10px;
         }
         .green-button:hover {
             background-color: #45A049;
@@ -70,7 +76,7 @@
             const errorMessage = document.getElementById('errorMessage');
 
             if (!referrer.includes(allowedReferrer)) {
-                document.body.innerHTML = '<h1>Unauthorized Access</h1><p>You are not authorized to access this page.</p><p>Do not try to bypass our links';
+                document.body.innerHTML = '<h1>Unauthorized Access</h1><p>You are not authorized to access this page.</p><p>Do not try to bypass our links</p>';
                 return;
             }
 
@@ -110,8 +116,10 @@
 <body>
     <h1>Generate Your Key</h1>
     <input type="text" id="generatedKey" class="textbox" readonly placeholder="Your key will appear here...">
-    <button class="button" id="generateKeyButton">Generate Key</button>
-    <button class="green-button" id="copyKeyButton">Copy Key</button>
+    <div class="button-container">
+        <button class="button" id="generateKeyButton">Generate Key</button>
+        <button class="green-button" id="copyKeyButton">Copy Key</button>
+    </div>
     <div class="success-message" id="successMessage"></div>
     <div class="error-message" id="errorMessage"></div>
 </body>
