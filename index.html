@@ -3,119 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executors Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Executor Hub</title>
     <style>
         body {
-            background-color: #1a1a1a;
-            color: #ffffff;
             font-family: Arial, sans-serif;
-            padding: 20px;
             margin: 0;
+            padding: 0;
+            background-image: url('https://unsplash.com/photos/your-chosen-image'); /* Replace with your chosen image URL */
+            background-size: cover;
+            background-attachment: fixed;
+            color: #ffffff;
         }
         header {
-            background-color: #2c2c2c;
-            color: #ff4d4d;
-            padding: 10px 0;
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid #ffa500;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            margin-top: 10px;
         }
-        nav ul li {
-            margin: 0;
-        }
-        nav ul li a {
-            color: #ff4d4d;
+        nav a {
+            color: #ffa500;
             text-decoration: none;
-            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.2em;
         }
-        nav ul li a:hover {
+        nav a:hover {
             text-decoration: underline;
         }
-        .section {
-            margin: 20px 0;
+        .container {
+            padding: 20px;
+            background-color: rgba(18, 18, 18, 0.8);
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
         }
-        .section h2 {
-            color: #ff4d4d;
-            border-bottom: 2px solid #ff4d4d;
-            padding-bottom: 10px;
-        }
-        .button-container {
+        .download-section {
             display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
-            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .download-box {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 45%;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .download-box img {
+            width: 100px;
+            height: 100px;
+        }
+        .download-box h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
         }
         .button {
-            background-color: #2c2c2c;
-            color: #ffffff;
-            padding: 15px 20px;
-            border: 2px solid #ff4d4d;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffa500;
+            color: #121212;
+            text-decoration: none;
+            font-weight: bold;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            transition: all 0.3s ease;
+            margin-top: 15px;
         }
         .button:hover {
-            background-color: #ff4d4d;
-            color: #ffffff;
-        }
-        .button i {
-            margin-right: 10px;
+            background-color: #ff8500;
         }
         footer {
-            background-color: #2c2c2c;
-            color: #ff4d4d;
+            background-color: rgba(30, 30, 30, 0.9);
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 10px;
+            border-top: 2px solid #ffa500;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Executors Dashboard</h1>
+        <h1>Executor Hub</h1>
         <nav>
-            <ul>
-                <li><a href="#pc-executors">PC Executors</a></li>
-                <li><a href="#mobile-executors">Mobile Executors</a></li>
-            </ul>
+            <a href="#features">Features</a>
+            <a href="#downloads">Downloads</a>
+            <a href="#faq">FAQ</a>
         </nav>
     </header>
-
-    <div class="content">
-        <div class="section" id="pc-executors">
-            <h2>PC Executors</h2>
-            <div class="button-container">
-                <button class="button"><i class="fas fa-desktop"></i> PC Executor 1</button>
-                <button class="button"><i class="fas fa-desktop"></i> PC Executor 2</button>
-                <button class="button"><i class="fas fa-desktop"></i> PC Executor 3</button>
-                <button class="button"><i class="fas fa-desktop"></i> PC Executor 4</button>
+    <div class="container">
+        <section id="downloads" class="download-section">
+            <div class="download-box">
+                <img src="android-icon.png" alt="Android Icon"> <!-- Replace with actual icon URL -->
+                <h3>Download for Android</h3>
+                <p>Get the latest version of our executor for Android devices.</p>
+                <a href="#" class="button">Download Android</a>
             </div>
-        </div>
-
-        <div class="section" id="mobile-executors">
-            <h2>Mobile Executors</h2>
-            <div class="button-container">
-                <button class="button"><i class="fas fa-mobile-alt"></i> Mobile Executor 1</button>
-                <button class="button"><i class="fas fa-mobile-alt"></i> Mobile Executor 2</button>
-                <button class="button"><i class="fas fa-mobile-alt"></i> Mobile Executor 3</button>
-                <button class="button"><i class="fas fa-mobile-alt"></i> Mobile Executor 4</button>
+            <div class="download-box">
+                <img src="windows-icon.png" alt="Windows Icon"> <!-- Replace with actual icon URL -->
+                <h3>Download for Windows</h3>
+                <p>Get the latest version of our executor for Windows PCs.</p>
+                <a href="#" class="button">Download Windows</a>
             </div>
-        </div>
+        </section>
+        <!-- Additional sections like Features and FAQ can be added here -->
     </div>
-
     <footer>
-        <p>&copy; 2024 Executors Dashboard</p>
+        <p>&copy; 2024 Executor Hub. All rights reserved.</p>
     </footer>
 </body>
 </html>
