@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executor Hub - Android Executors</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(30, 30, 30, 0.95);
+            padding: 10px 20px;
+            text-align: left;
+            border-bottom: 2px solid #3498db;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #3498db;
+        }
+
+        .executors-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .executor-box {
+            width: calc(33.33% - 20px);
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+        }
+
+        .executor-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+            filter: brightness(1.1);
+        }
+
+        .executor-box h3 {
+            margin-top: auto;
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.5em;
+        }
+
+        .executor-box .button {
+            margin-bottom: 10px;
+            background-color: rgba(52, 152, 219, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.6);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .executor-box .button:hover {
+            background-color: rgba(52, 152, 219, 1);
+            box-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .executor-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Executor Hub - Android Executors</h1>
+    </header>
+    <section class="executors-section">
+        <!-- Delta Executor -->
+        <div class="executor-box" style="background-image: url('https://lh3.googleusercontent.com/rpGDnqN7XM7IQv1a1tipKOT-iHWmrqkLMoalU8V8GIjfibg9m2OrYCyNe-y1EL3Rhh0x2JFw6hRN-eFMeCK2uc5Uavo=s1280-w1280-h800');">
+            <h3>Delta Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Codex Executor -->
+        <div class="executor-box" style="background-image: url('https://i.ytimg.com/vi/neZTQIqJ55Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAsQh7nCkwHtVb7CXUm1A3qelysYw');">
+            <h3>Codex Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Evon Executor -->
+        <div class="executor-box" style="background-image: url('https://avatars.mds.yandex.net/get-vthumb/4586431/abe76122a88d4f01cf822540e8d32160/800x450');">
+            <h3>Evon Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Arceus X Executor -->
+        <div class="executor-box" style="background-image: url('https://i.ytimg.com/vi/dWsmIS_aPKQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCzYlH6uk-tNNXMB8RmDGdNK1QH0A');">
+            <h3>Arceus X Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Hydrogen Executor -->
+        <div class="executor-box" style="background-image: url('https://i.ytimg.com/vi/80v3gCaPkMQ/maxresdefault.jpg');">
+            <h3>Hydrogen Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Fluxus Executor -->
+        <div class="executor-box" style="background-image: url('https://i.ytimg.com/vi/Lc6YAr10QW0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC38hiITT_lfiMszb9V2DhySNvArQ');">
+            <h3>Fluxus Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Vega X Executor -->
+        <div class="executor-box" style="background-image: url('https://i.ytimg.com/vi/y4x3NKQ405w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDCd0YT9D1-6c2CMoSq_VhbjQKZWA');">
+            <h3>Vega X Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+    </section>
+</body>
+</html>

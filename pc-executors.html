@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executor Hub - Windows Executors</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(30, 30, 30, 0.95);
+            padding: 10px 20px;
+            text-align: left;
+            border-bottom: 2px solid red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: red;
+        }
+
+        .header-icons a {
+            color: white;
+            margin-left: 15px;
+            font-size: 1.5em;
+        }
+
+        .header-icons a:hover {
+            color: #ff0000;
+        }
+
+        .executors-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .executor-box {
+            width: calc(33.33% - 20px);
+            height: 300px; /* Increased height for better visibility */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .executor-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        .executor-box h3 {
+            margin-top: auto;
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.5em;
+        }
+
+        .executor-box .button {
+            margin-bottom: 10px;
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .executor-box .button:hover {
+            background-color: rgba(200, 0, 0, 0.9);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .executor-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Executor Hub - Windows Executors</h1>
+        <div class="header-icons">
+            <a href="https://discord.gg/8jU5FTbnAF" target="_blank"><i class="fab fa-discord" style="color: #7289DA;"></i></a>
+            <a href="https://www.youtube.com/c/H4xScripts" target="_blank"><i class="fab fa-youtube" style="color: #FF0000;"></i></a>
+        </div>
+    </header>
+    <section class="executors-section">
+        <!-- Xeno Executor -->
+        <div class="executor-box" style="background-image: url('https://camo.githubusercontent.com/eb53aeb495f91d8f713afafae40d9c7994f8ec7b6f6c903a5954f39851b597a8/68747470733a2f2f692e7974696d672e636f6d2f76692f786b50396c706d366c4d6f2f6d617872657364656661756c742e6a7067');">
+            <h3>Xeno Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Atlantis Executor -->
+        <div class="executor-box" style="background-image: url('https://i.ibb.co/z4HTpxv/youtube-thumbnail-1.jpg');">
+            <h3>Atlantis Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Solara Executor -->
+        <div class="executor-box" style="background-image: url('https://repository-images.githubusercontent.com/839646775/bf0f2122-a68e-41f2-8cec-3c815915f8d9');">
+            <h3>Solara Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Luna Executor -->
+        <div class="executor-box" style="background-image: url('https://camo.githubusercontent.com/93e62911e7d3d08b2ffc80e102e0354d14dbbcb527007dbec881719c15d1f93f/68747470733a2f2f692e7265736d2e696d2f6a486848394f792e706e67');">
+            <h3>Luna Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Wave Executor -->
+        <div class="executor-box" style="background-image: url('https://repository-images.githubusercontent.com/899697895/429aa32d-91cf-46a5-9634-721e6d62962f');">
+            <h3>Wave Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Selene Executor -->
+        <div class="executor-box" style="background-image: url('https://i.ytimg.com/vi/tjpihB7NNpU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD2UXUKNzdF1lfXMkDy51FF4EaAjQ');">
+            <h3>Selene Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+        <!-- Zorara Executor -->
+        <div class="executor-box" style="background-image: url('https://i.ytimg.com/vi/LGst1UdtJ-w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAGPDz-0ORL8sV8NmhrplY_nkEtRw');">
+            <h3>Zorara Executor</h3>
+            <a href="#" class="button">Download</a>
+        </div>
+    </section>
+</body>
+</html>
